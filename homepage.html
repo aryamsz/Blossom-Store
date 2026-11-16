@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Link to Google Fonts for custom font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+  <title>Blossom & Bloom</title>
+  <style>
+    /* General body styles */
+    body {
+      margin: 0; /* Remove default margin */
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, "Italianno", cursive; /* Set fonts */
+      background-color: #ffffff; /* White background for the page */
+    }
+
+    /* Header styles */
+    header {
+      background-color: #f5c5afe2; /* Soft pink background for header */
+      color: white; /* White text */
+      padding: 20px 0; /* Padding around the header */
+      text-align: center; /* Center align text */
+    }
+
+    .logo {
+      font-size: 65px; /* Large font size for the logo */
+      font-weight: bold; /* Make the logo text bold */
+      font-family: 'Italianno', serif; /* Use cursive font for logo */
+    }
+
+    /* Navigation menu styles */
+    nav ul {
+      display: flex; /* Use flexbox to align items horizontally */
+      list-style: none; /* Remove default list style */
+      gap: 2rem; /* Add space between the menu items */
+      justify-content: center; /* Center the menu items */
+      padding: 8px 0; /* Vertical padding */
+      margin: 0; /* Remove margin */
+      background-color: rgba(154, 185, 128, 0.77); /* Soft green background */
+    }
+
+    nav ul li a {
+      text-decoration: none; /* Remove underline from links */
+      color: #fff; /* White text for links */
+      font-weight: bold; /* Bold text for links */
+      transition: color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    nav ul li a:hover {
+      color: #ffe5e5f0; /* Light pink color on hover */
+    }
+
+    /* Container for the main section with image and text */
+    .container {
+      display: flex; /* Flexbox layout */
+      align-items: center; /* Vertically align items */
+      padding: 60px 80px; /* Add padding */
+      gap: 60px; /* Space between the image and text */
+    }
+
+    /* Image styling */
+    .container img {
+      max-width: 450px; /* Limit image width */
+      width: 90%; /* Responsive width */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 8px; /* Rounded corners */
+    }
+
+    /* Content section (text) styling */
+    .content {
+      max-width: 500px; /* Limit text width */
+    }
+
+    /* Title style for the content */
+    .content h2 {
+      font-size: 24px; /* Font size for title */
+      color: #333; /* Dark grey color for title */
+      border-bottom: 1px dotted #ccc; /* Dotted underline */
+      padding-bottom: 10px; /* Padding below the title */
+      margin-bottom: 20px; /* Space below the title */
+    }
+
+    /* Paragraph styling */
+    .content p {
+      line-height: 1.6; /* Increase line height for better readability */
+      color: #444; /* Slightly lighter grey for text */
+    }
+
+    /* Style for emphasized text */
+    .content strong {
+      color: #00a383; /* Green color for strong text */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header section with logo -->
+  <header>
+    <div class="logo">Blossom & Bloom</div>
+  </header>
+
+  <!-- Navigation menu -->
+  <nav>
+    <ul>
+      <li><a href="homepage.html">ABOUT</a></li>
+      <li><a href="cart.html">SHOPPING CART</a></li>
+      <li><a href="Message.php">MESSAGE</a></li>
+      <li><a href="occasions.html">GIFTS</a></li>
+      <li><a href="boquet.html">BOQUETS</a></li>
+      <li><a href="login.html">JOIN US</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content section with image and description -->
+  <div class="container">
+    <img src="Tulip.jpg" alt="Tulip!"> <!-- Image of flowers (Tulip) -->
+
+    <div class="content">
+        <h2>FRESH BLOOMS, HANDCRAFTED WITH LOVE.</h2> <!-- Title for content -->
+        <p>At <strong>Blossom & Bloom</strong>, we believe flowers speak the language of love, joy, and warmth. Every bouquet is carefully crafted to bring a touch of magic into your moments.</p> <!-- Description paragraph -->
+        <p>Whether you’re celebrating life’s biggest occasions or simply saying "I’m Happy For You"—our fresh, seasonal flowers are picked with care and arranged to perfection.</p> <!-- Another paragraph -->
+    </div>
+  </div>
+
+</body>
+</html>

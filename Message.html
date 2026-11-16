@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pickup Page</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
+  <style>
+    /* Basic styling for the body */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fffaf8;
+    }
+
+    /* Header section styling */
+    header {
+      background: linear-gradient(to right, #f4c2b5, #f7d9c4);
+      padding: 20px;
+      text-align: center;
+      font-size: 65px;
+      color: white;
+      font-family: "Italianno", cursive;
+      font-weight: bold;
+    }
+
+    /* Navigation menu styling */
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      justify-content: center;
+      padding: 8px 0;
+      margin: 0;
+      background-color: rgba(154, 185, 128, 0.9);
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffe5e5f0;
+    }
+
+    /* Styling for the main container of the message form */
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Heading styling for the form */
+    h2 {
+      color: #444;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: "Italianno", cursive;
+      font-size: 38px;
+      color: #f4a896;
+    }
+
+    /* Label styling */
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    /* Input and select styling */
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    /* Styling for radio buttons */
+    .radio-group {
+      margin: 10px 0;
+    }
+
+    .radio-group label {
+      display: inline-block;
+      margin-right: 20px;
+      font-weight: normal;
+    }
+
+    /* Styling for the message textarea */
+    textarea {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fffaf8;
+      resize: none;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-top: 10px;
+    }
+
+    /* Button styling */
+    button {
+      background-color: #f4a896;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #e88c7a;
+    }
+
+    /* Styling for the quote section */
+    .quote {
+      text-align: center;
+      font-style: italic;
+      color: #7b1f45;
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>Blossom & Bloom</header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="homepage.html">ABOUT</a></li>
+      <li><a href="cart.html">SHOPPING CART</a></li>
+      <li><a href="Message.html">MESSAGE</a></li>
+      <li><a href="occasions.html">GIFTS</a></li>
+      <li><a href="boquet.html">BOQUETS</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container for Message Form -->
+  <div class="container">
+    <h2>Your Flower Message</h2>
+    <!-- Quote section to add a quote about flowers -->
+    <p class="quote">"A flower is a silent note of love."</p>
+
+    <!-- Label for the message input field -->
+    <label for="message">Write your message on the card:</label>
+
+    <!-- Textarea where the user can type the message -->
+    <textarea id="message" rows="6" placeholder="Type your message here..."></textarea>
+
+    <!-- Send Button which triggers the message sending process -->
+    <button type="submit" id="sendBtn" onclick="sendMessage()">Send</button>
+  </div>
+
+  <script>
+    /* Function to handle the message sending process */
+    function sendMessage() {
+      // Change the button text to "Sending your message..."
+      const sendButton = document.getElementById("sendBtn");
+      sendButton.innerText = "Sending your message...";
+
+      // Simulate the process of sending the message (using setTimeout for 2 seconds delay)
+      setTimeout(function() {
+        alert("Message Sent!"); // Display an alert once the message is sent
+        sendButton.innerText = "Send"; // Reset the button text back to "Send"
+      }, 2000); // Simulate a delay of 2 seconds
+    }
+  </script>
+
+</body>
+</html>

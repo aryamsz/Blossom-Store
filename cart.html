@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css" /> <!-- Link to external CSS stylesheet -->
+  
+  <!-- Preconnect to Google Fonts for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Link to Italianno font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>Blossom & Bloom</header> <!-- Website Header -->
+
+  <nav>
+    <!-- Navigation bar with links to other pages -->
+    <ul>
+      <li><a href="homepage.html">ABOUT</a></li>
+      <li><a href="cart.html">SHOPPING CART</a></li>
+      <li><a href="Message.html">MESSAGE</a></li>
+      <li><a href="occasions.html">GIFTS</a></li>
+      <li><a href="boquet.html">BOQUETS</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Shopping Cart</h2>
+    
+    <!-- Div to display cart items -->
+    <div id="items"></div>
+    
+    <!-- Paragraph to display total price -->
+    <p><strong id="total"></strong></p>
+
+    <!-- Button to proceed to checkout page -->
+    <a href="checkout.php"><button>checkout</button></a>
+
+    <!-- Button to clear all items from the cart -->
+    <button id="clear" onclick="clearCart()">Clear All</button>
+  </div>
+
+  <script>
+    // Get references to the HTML elements
+    const itemsDiv = document.getElementById("items");
+    const totalTag = document.getElementById("total");
+  
+    // Retrieve cart data from localStorage or initialize an empty array
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let total = 0; // Initialize total price to zero
+  
+    // Loop through each item in the cart
+    cart.forEach(item => {
+      const p = document.createElement("p"); // Create a new paragraph element
+      p.innerText = `${item.name} - $${item.price.toFixed(2)}`; // Set the text showing item name and price
+      itemsDiv.appendChild(p); // Add the paragraph to the items div
+      total += item.price; // Add the item's price to the total
+    });
+  
+    // Display the total price
+    totalTag.innerText = `Total: $${total.toFixed(2)}`;
+
+    // Function to clear the cart
+    function clearCart() {
+      localStorage.removeItem("cart"); // Remove cart data from localStorage
+      location.reload(); // Reload the page to update the cart display
+    }
+  </script>
+</body>
+</html>

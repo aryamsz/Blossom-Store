@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pickup Page</title>
+
+  <!-- Link to an external Google font (Italianno) for header styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
+  <style>
+    /* Basic reset and body styling */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fffaf8;
+    }
+
+    /* Header styling with gradient background and custom font */
+    header {
+      background: linear-gradient(to right, #f4c2b5, #f7d9c4);
+      padding: 20px;
+      text-align: center;
+      font-size: 65px;
+      color: white;
+      font-family: "Italianno", cursive;
+      font-weight: bold;
+    }
+
+    /* Navigation menu styling */
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      justify-content: center;
+      padding: 8px 0;
+      margin: 0;
+      background-color: rgba(154, 185, 128, 0.9);
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffe5e5f0;
+    }
+
+    /* Container for the form */
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Section title */
+    h2 {
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    /* Label styling */
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    /* Input and dropdown styling */
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    /* Radio button group layout */
+    .radio-group {
+      margin: 10px 0;
+    }
+
+    .radio-group label {
+      display: inline-block;
+      margin-right: 20px;
+      font-weight: normal;
+    }
+
+    /* Button styling */
+    button {
+      background-color: #f4a896;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #e88c7a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Website header -->
+  <header>Blossom & Bloom</header>
+
+  <!-- Navigation menu -->
+  <nav>
+    <ul>
+      <li><a href="homepage.html">ABOUT</a></li>
+      <li><a href="cart.html">SHOPPING CART</a></li>
+      <li><a href="Message.html">MESSAGE</a></li>
+      <li><a href="occasions.html">GIFTS</a></li>
+      <li><a href="boquet.html">BOQUETS</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main container with the pickup form -->
+  <div class="container">
+    <h2>Pickup Information</h2>
+
+    <!-- Pickup form -->
+    <form>
+      <!-- Dropdown to select city -->
+      <label for="city">Select your city:</label>
+      <select id="city" name="city" required>
+        <option value="">-- Please choose a city --</option>
+        <option>Qassim</option>
+        <option>Riyadh</option>
+        <option>Jeddah</option>
+        <option>Mecca</option>
+        <option>Medina</option>
+        <option>Dammam</option>
+        <option>Abha</option>
+        <option>Tabuk</option>
+        <option>Hail</option>
+        <option>Najran</option>
+      </select>
+
+      <!-- Input for location description -->
+      <label for="location">Location description:</label>
+      <input type="text" id="location" name="location" placeholder="Describe your pickup location" required>
+
+      <!-- Radio buttons to select who will pick up the order -->
+      <label>Who will pick up the order?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="receiver" value="self"> I will pick it up</label>
+        <label><input type="radio" name="receiver" value="someone"> Someone else will pick it up</label>
+      </div><br><br>
+
+      <!-- Submit button -->
+      <button type="submit" onclick="goToThankYou(event)">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+
+  <script>
+    function goToThankYou(event) {
+      event.preventDefault(); // Prevent default form submission
+  
+      const form = event.target.closest('form');
+  
+      if (form.checkValidity()) {
+        // All fields are valid — go to thank you page
+        window.location.href = "thankyou.html";
+      } else {
+        // Show built-in browser validation messages
+        form.reportValidity();
+      }
+    }
+  </script>
+  
+
+</body>
+</html>

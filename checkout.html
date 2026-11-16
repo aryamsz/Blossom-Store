@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><!-- Specifies the character encoding for the HTML document -->
+  <title>Checkout</title><!-- Title of the webpage displayed in the browser tab -->
+  <link rel="stylesheet" href="style.css" /><!-- Link to an external CSS file for styling -->
+  <!-- Preconnect to improve loading performance for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet"><!-- Link to a custom Google Font called 'Italianno' -->
+</head>
+<body>
+  <!-- Website header displaying the brand name -->
+  <header>Blossom & Bloom</header>
+  <!-- Navigation bar with links to different pages -->
+  <nav>
+    <ul>
+      <li><a href="homepage.html">ABOUT</a></li>
+      <li><a href="cart.html">SHOPPING CART</a></li>
+      <li><a href="Message.html">MESSAGE</a></li>
+      <li><a href="occasions.html">GIFTS</a></li>
+      <li><a href="boquet.html">BOQUETS</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Payment information </h2>
+    <form action="thankyou.html">
+      <!-- Card Number Field -->
+    <label>Card number:</label>
+    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required 
+       inputmode="numeric" pattern="\d{4} \d{4} \d{4} \d{4}" maxlength="19" 
+       title="Please enter a 16-digit card number" />
+
+       <!-- Cardholder Name Field -->
+      <label>Cardholder's name:</label>
+      <input type="text" id="cardholder" placeholder="e.g. Sarah Mohammed" required 
+       pattern="[A-Za-z\s]+" title="Only English letters and spaces are allowed" />
+
+      <!-- Exp date Field -->
+      <label>Exp date:</label>
+      <input type="month" required />
+
+      <!-- CVV Field -->
+      <label>CVV:</label>
+      <input type="text" id="cvv" placeholder="123" required 
+       inputmode="numeric" pattern="\d{3}" maxlength="3" 
+       title="Please enter a 3-digit CVV" />
+
+      <button type="submit" onclick="goToPickup(event)"> submit </button>
+    </form>
+  </div>
+  
+
+  <!-- JavaScript -->
+  <script>
+    // Format card number input
+    const cardInput = document.getElementById('cardNumber');
+    cardInput.addEventListener('input', function (e) {
+      let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+      value = value.substring(0, 16); // Limit to 16 digits
+      const formatted = value.match(/.{1,4}/g)?.join(' ') || '';
+      e.target.value = formatted;
+    });
+  
+    // Prevent non-digit input in CVV
+    const cvvInput = document.getElementById('cvv');
+    cvvInput.addEventListener('input', function (e) {
+      e.target.value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+    });
+    const nameInput = document.getElementById('cardholder');
+
+nameInput.addEventListener('input', function (e) {
+  // Remove anything that is not a letter or space
+  e.target.value = e.target.value.replace(/[^A-Za-z\s]/g, '');
+});
+
+function goToPickup(event) {
+  event.preventDefault(); // prevent default form action
+
+  // Get the form element
+  const form = event.target.closest('form');
+
+  // Check if form is valid
+  if (form.checkValidity()) {
+    // If all inputs are valid, go to the next page
+    window.location.href = "Pickup.html";
+  } else {
+    // If not valid, trigger browser's validation
+    form.reportValidity();
+  }
+}
+
+
+</script>
+
+</body>
+</html>

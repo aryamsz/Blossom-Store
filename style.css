@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf8;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif,"Italianno", cursive;
+  }
+  
+  header {
+    background: linear-gradient(to right, #f4c2b5, #f7d9c4);
+    padding: 20px;
+    text-align: center;
+    font-size: 65px;
+    color: white;
+    font-family: "Italianno", cursive;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none; 
+    gap: 2rem;         
+    justify-content: center; 
+    padding: 8px 0;
+    margin: 0;
+    background-color: rgba(154, 185, 128, 0.77);
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ffe5e5f0; 
+  }
+  
+  
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  h2 {
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"], input[type="number"], input[type="month"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  button {
+    background-color: #f4a896;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #e88c7a;
+  }
+
+  .clear{
+
+    background-color: #f4a896;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+
+  }

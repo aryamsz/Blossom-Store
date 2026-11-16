@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blossom & Bloom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffaf8;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(to right, #f4c2b5, #f7d9c4);
+      padding: 20px;
+      text-align: center;
+      font-size: 50px;
+      color: white;
+      font-family: "Italianno", cursive;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none; 
+      gap: 2rem;         
+      justify-content: center; 
+      padding: 8px 0;
+      margin: 0;
+      background-color: rgba(154, 185, 128, 0.77);
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffe5e5f0; 
+    }
+
+    .product-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .product-section h2 {
+      width: 100%;
+      font-size: 30px;
+      color: #444;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .product-card {
+      background-color: #fff;
+      width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      color: #444;
+      margin-top: 15px;
+    }
+
+    .product-card p {
+      color: #555;
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .button {
+      background-color: #f4a896;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #e88c7a;
+    }
+
+    footer {
+      background-color: #f7d9c4;
+      padding: 20px;
+      color: white;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  Blossom & Bloom
+</header>
+
+<nav>
+  <ul>
+    <li><a href="homepage.html">ABOUT</a></li>
+    <li><a href="cart.html">SHOPPING CART</a></li>
+    <li><a href="Message.php">MESSAGE</a></li>
+    <li><a href="occasions.html">GIFTS</a></li>
+    <li><a href="boquet.html">BOQUETS</a></li>
+  </ul>
+</nav>
+
+<!-- New Baby Section -->
+<div class="product-section">
+  <h2>New Baby</h2>
+
+  <div class="product-card">
+    <img src="baby1.jpg" alt="Hello Baby Bouquet 1">
+    <h3>New Baby Born Bouquet</h3>
+    <p class="price">$35</p>
+    <p>Celebrate the arrival of a new baby with a vibrant bouquet.</p>
+    <button class="button" onclick="addToCart('New Baby Born Bouquet', 35)">Send Congratulations</button>
+  </div>
+
+  <div class="product-card">
+    <img src="baby2.jpg" alt="Hello Baby Bouquet 2">
+    <h3>Welcome Baby Bouquet</h3>
+    <p class="price">$32</p>
+    <p>Full of colors and joy for a new little one!</p>
+    <button class="button" onclick="addToCart('Welcome Baby Bouquet', 32)">Send Congratulations</button>
+  </div>
+</div>
+
+<!-- Graduation Section -->
+<div class="product-section">
+  <h2>Graduation</h2>
+
+  <div class="product-card">
+    <img src="grad1.jpg" alt="Graduation Flower Arrangement 1">
+    <h3>Graduation Surprise</h3>
+    <p class="price">$40</p>
+    <p>Includes balloon and teddy bear for graduates.</p>
+    <button class="button" onclick="addToCart('Graduation Surprise', 40)">Send Congratulations</button>
+  </div>
+
+  <div class="product-card">
+    <img src="grad2.jpg" alt="Graduation Flower Arrangement 2">
+    <h3>Elegant Graduation Bouquet</h3>
+    <p class="price">$38</p>
+    <p>Elegant bouquet with white flowers and graduation cap.</p>
+    <button class="button" onclick="addToCart('Elegant Graduation Bouquet', 38)">Send Congratulations</button>
+  </div>
+</div>
+
+<!-- Eid Mubarak Section -->
+<div class="product-section">
+  <h2>Eid Mubarak</h2>
+
+  <div class="product-card">
+    <img src="B1.jpg" alt="Eid Flower Arrangement 1">
+    <h3>Eid Mubarak Bouquet</h3>
+    <p class="price">$29</p>
+    <p>Celebrate Eid with this lovely bouquet.</p>
+    <button class="button" onclick="addToCart('Eid Mubarak Bouquet', 29)">Send Eid Wishes</button>
+  </div>
+
+  <div class="product-card">
+    <img src="B2.jpg" alt="Eid Flower Arrangement 2">
+    <h3>Rose Eid Gift</h3>
+    <p class="price">$33</p>
+    <p>A mix of beautiful roses for your celebrations.</p>
+    <button class="button" onclick="addToCart('Rose Eid Gift', 33)">Send Eid Wishes</button>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ name: name, price: price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(name + " added to cart for $" + price);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <style>
+        /* Body Styling */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fffaf8;
+        }
+ 
+        /* Header Styling */
+        header {
+            background: linear-gradient(to right, #f4c2b5, #f7d9c4);
+            padding: 20px;
+            text-align: center;
+            font-size: 65px;
+            color: white;
+            font-family: 'Italianno', cursive;
+            font-weight: bold;
+        }
+      
+        /* Navigation Styling */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;       
+            justify-content: center;
+            padding: 8px 0;
+            margin: 0;
+            background-color: rgba(154, 185, 128, 0.77);
+        }
+      
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+      
+        nav ul li a:hover {
+            color: #ffe5e5f0;
+        }
+ 
+        /* Main Container Styling */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+      
+        /* Heading Styling */
+        h2 {
+            color: #444;
+            margin-bottom: 20px;
+        }
+      
+        /* Input Fields Styling */
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+      
+        /* Button Styling */
+        button {
+            background-color: #f4a896;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+      
+        button:hover {
+            background-color: #e88c7a;
+        }
+ 
+        /* Message Section Styling */
+        .message {
+            text-align: center;
+            margin-top: 10px;
+        }
+ 
+        .message a {
+            color: #f4a896;
+            text-decoration: none;
+        }
+ 
+        /* Sign-up Section Styling */
+        .signup-container {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+ 
+    <!-- Header Section -->
+    <header>
+        Blossom & Bloom
+    </header>
+ 
+    <div class="container">
+        <!-- sign-up Form Section -->
+        <h2>Sign up</h2>
+        <form action="signup.php" method="POST" onsubmit="return validatesignupForm()">
+            <!-- Username Input -->
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <!-- Password Input -->
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <!-- Submit Button for signup -->
+            <button type="submit">signup</button>
+        </form>
+        <!-- Message Section for Login link -->
+        <div class="message">
+            <p>Do you have an account? <a href="login.html">Log in here</a></p>
+        </div>
+ 
+        
+    <!-- JavaScript Section for validation  -->
+   <script>
+    function validatesignupForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Check if username has at least 8 characters
+        if (username.length < 8) {
+            alert("Username must be at least 8 characters long.");
+            return false;
+        }
+
+        // Check if password has at least 12 characters
+        if (password.length < 12) {
+            alert("Password must be at least 12 characters long.");
+            return false;
+        }
+
+        
+        return true;
+    }
+</script>
+
+ 
+        
+ 
+</body>
+</html>

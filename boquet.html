@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+      margin: 0;
+      background-color: #f8f8f8e2;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif,"Italianno", cursive;
+      
+    }
+
+    header {
+      background-color: #f5c5afe2;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 65px;
+      font-weight: bold;
+      font-family: 'Italianno', serif;
+    }
+
+  nav ul {
+  display: flex;
+  list-style: none; 
+  gap: 2rem;         
+  justify-content: center; 
+  padding: 8px 0;
+  margin: 0;
+  background-color: rgba(154, 185, 128, 0.77);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffe5e5f0; 
+}
+
+  .box-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    padding: 60px 80px;
+    gap: 20px; /* Space between the items */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+
+  .box {
+    text-align: center;
+    width: 18%; /* Adjust the width to control the number of items per row */
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .box img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .Icons a {
+    display: block;
+    margin: 10px 0;
+    padding: 8px 12px;
+    background-color: #f5c5afe2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .Icons a:hover {
+    background-color: #e7b7a2e2;
+  }
+
+  .price {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+
+
+  .content{
+   color: rgb(152, 155, 158);
+   font-weight: lighter;
+   font-size: 16px;
+  }
+
+  .price{
+    color: rgba(154, 185, 128, 0.77);
+  }
+
+</style>
+
+
+
+</head>
+
+<body>
+
+  
+
+<section class="Products" id="Products">
+
+  <header>
+    <div class="logo">Blossom & Bloom</div>
+  </header>
+
+    <nav>
+      <ul>
+        <li><a href="homepage.html">ABOUT</a></li>
+        <li><a href="cart.html">SHOPPING CART</a></li>
+        <li><a href="Message.html">MESSAGE</a></li>
+        <li><a href="occasions.html">GIFTS</a></li>
+        <li><a href="boquet.html">BOQUETS</a></li>
+      </ul>
+    </nav>
+
+  
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="B1.jpg" alt="Tulip bouquet" width="450" height="500">
+            <div class="Icons">
+                <a href="#" class="f-cart" id="add1">add to cart</a>
+            </div>
+            <div class="content">
+                <h3>White Roses bouquet</h3>
+            </div>
+            <div class="price">
+                $20.75
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="B2.jpg" alt="Tulip bouquet" width="450" height="500">
+            <div class="Icons">
+                <a href="#" class="f-cart" id="add2">add to cart</a>
+            </div>
+            <div class="content">
+                <h3>Roses bouquet</h3>
+            </div>
+            <div class="price">
+                $20.75
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="B3.jpg" alt="Tulip bouquet" width="450" height="500">
+            <div class="Icons">
+                <a href="#" class="f-cart" id="add3">add to cart</a>
+            </div>
+            <div class="content">
+                <h3>Purple Tulip bouquet</h3>
+            </div>
+            <div class="price">
+                $20.75
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="B4.jpg" alt="Tulip bouquet" width="450" height="500">
+            <div class="Icons">
+                <a href="#" class="f-cart" id="add4">add to cart</a>
+            </div>
+            <div class="content">
+                <h3>Sunflower bouquet</h3>
+            </div>
+            <div class="price">
+                $20.75
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="B5.jpg" alt="Tulip bouquet" width="450" height="500">
+            <div class="Icons">
+                <a href="#" class="f-cart" id="add5">add to cart</a>
+            </div>
+            <div class="content">
+                <h3>Pink Roses bouquet</h3>
+            </div>
+            <div class="price">
+                $20.75
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+  const products = [
+    { name: "White Roses bouquet", price: 20.75 },
+    { name: "Roses bouquet", price: 20.75 },
+    { name: "Purple Tulip bouquet", price: 20.75 },
+    { name: "Sunflower bouquet", price: 20.75 },
+    { name: "Pink Roses bouquet", price: 20.75 }
+  ];
+
+  for (let i = 0; i < products.length; i++) {
+    document.getElementById("add" + (i + 1)).onclick = function () {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(products[i]);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(products[i].name + " added to cart!");
+    };
+  }
+</script>
+
+</body>
+</html>
+   
