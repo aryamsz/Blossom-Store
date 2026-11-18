@@ -1,5 +1,5 @@
 # Blossom & Bloom - Online Flower Store
-An e-commerce web application for browsing and ordering flower bouquets, developed using HTML and PHP.
+An academic e-commerce web application for browsing and ordering flower bouquets, developed using HTML and PHP.
 ## Features
 * Product Browsing: Explore a variety of flower bouquets and arrangements.
 * Custom Gift Card Message: Write personalized messages to be included with flower orders.
